@@ -5,7 +5,7 @@ import ExtraSection from '../ExtraSection/ExtraSection';
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
+            <Banner></Banner><br /><br /><br />
             <ExtraSection></ExtraSection>
         </div>
     );
