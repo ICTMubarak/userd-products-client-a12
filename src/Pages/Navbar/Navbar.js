@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+//import UserContext from '../../contexts/UserContext';
+import { AuthContext } from '../../contexts/UserContext';
+
+// //import React, { useContext } from 'react';
+// import { Link } from 'react-router-dom';
+// import UserContext from '../../contexts/UserContext';
+// import { AuthContext } from '../contexts/UserContext';
 
 const Navbar = () => {
+    const {user, logOut} = useContext(AuthContext);
+    console.log('usr=',user);
+    const handleLogout = () => {
+        logOut()
+        .then(()=>{ })
+        .catch(error => console.log(error));
+    }
+
     return (
         <div className="navbar bg-base-100">
         <div className="navbar-start">
@@ -46,13 +61,15 @@ const Navbar = () => {
               </ul>
             </li>
             <li><Link to='/login'>LogIn</Link></li>
-            <li><a>LogOut</a></li>
+            <li><a><button onClick={handleLogout}>Log Out</button></a></li>
             <li><Link to='/register'>Register</Link></li>
           </ul>
         </div>
         <div className="navbar-end">
+        {user?.email && <span>{user.email}</span>}
            <p>Profile Name</p>
         </div>
+        {console.log(user)}
       </div>
     );
 };
