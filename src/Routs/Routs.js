@@ -3,6 +3,7 @@ import Login from "../Login/Login";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import Blog from "../Pages/Blog/Blog";
 import Home from "../Pages/Home/Home";
+import NotFound from "../Pages/NotFound/NotFound";
 import Acer from "../Pages/ProductShow/Acer";
 import Dell from "../Pages/ProductShow/Dell";
 import Hp from "../Pages/ProductShow/Hp";
@@ -50,7 +51,12 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
-            }
+            },
+            {
+                path: '*',
+                element: <NotFound></NotFound>
+            },
+
         ]
     }
 ])
