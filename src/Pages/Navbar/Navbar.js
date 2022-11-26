@@ -20,8 +20,7 @@ const Navbar = () => {
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
               <li><Link to='/'>Home</Link></li>
-              <li><Link to='/addproduct'>Add Product</Link></li>
-              <li><a>Blog</a></li>
+              
               <li tabIndex={0}>
                 <a className="justify-between">
                   Select Catagory
@@ -33,7 +32,11 @@ const Navbar = () => {
                   <li><Link to="/acer">Acer Laptop</Link></li>
                 </ul>
               </li>
-              <li><Link to='/login'>LogIn</Link></li>
+
+            <li><Link to='/addproduct'>Add Product</Link></li>
+            <li><Link to='/blog'>Blog</Link></li>
+
+            <li><Link to='/login'>LogIn</Link></li>
             <li><Link>LogOut</Link></li>
             <li><Link to='/register'>Register</Link></li>
             </ul>
@@ -43,8 +46,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
           <li><Link to='/'>Home</Link></li>
-          <li><Link to='/addproduct'>Add Product</Link></li>
-            <li><a>Blog</a></li>
+          
             <li tabIndex={0}>
               <a>
                 Select Catagory
@@ -56,6 +58,10 @@ const Navbar = () => {
                   <li><Link to="/acer">Acer Laptop</Link></li>
               </ul>
             </li>
+
+          <li><Link to='/addproduct'>Add Product</Link></li>
+          <li><Link to='/blog'>Blog</Link></li>
+
             <li><Link to='/login'>LogIn</Link></li>
             <li><a><button onClick={handleLogout}>Log Out</button></a></li>
             <li><Link to='/register'>Register</Link></li>

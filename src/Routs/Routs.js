@@ -1,6 +1,7 @@
 import Main from "../Layout/Main";
 import Login from "../Login/Login";
 import AddProduct from "../Pages/AddProduct/AddProduct";
+import Blog from "../Pages/Blog/Blog";
 import Home from "../Pages/Home/Home";
 import Acer from "../Pages/ProductShow/Acer";
 import Dell from "../Pages/ProductShow/Dell";
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
                 path: '/acer',
                 element: <Acer></Acer>,
                 loader: ()  => fetch('http://localhost:5000/acer')
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             },
             {
                 path: '/login',
