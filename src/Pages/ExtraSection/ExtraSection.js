@@ -8,11 +8,11 @@ const ExtraSection = () => {
              <div className="card card-compact w-full bg-base-100 shadow-xl">
                <div className="card-body">
                  <h2 className="card-title">About us</h2>
-                 <p>Those who provide different services individually but do not have their own website, we promote their services.</p>
-                 <p>You can write details about your service and post it on our ad service. Tell people about your services.</p>
-                 <p>You can write details about your service and post it on our ad service. Tell people about your services.</p>
-                 <p>You can write details about your service and post it on our ad service. Tell people about your services.</p>
-                 <p>People can give their reviews about your services here.</p>
+                 <p>This web site is basically a website for buy and sale of old laptops.
+                 If you have an old laptop, you can easily sell it here. But in this case you need to sign up here and add your laptop here.
+                 And if you want to buy an old laptop, you can easily buy your favorite laptop by surpassing the category here.
+                 You will get these services free of charge. If you like our service then you can tell your friends about our website. And if you have any suggestion feel free to let us know. We will do our best to update our web site according to your suggestions.
+                 </p>
                </div>
              </div>
             </section>

@@ -4,10 +4,10 @@ const Blog = () => {
     return (
         <div>
             <div class="text-left">
-                <h1 class="text-center underline decoration-wavy">Welcome to our Blog</h1>
+                <h1 class="text-center underline decoration-wavy font-bold text-2xl">Welcome to our Blog</h1>
                 <br />
-                <h5>Question No-1 What are the different ways to manage a state in a React application?</h5>
-                <p>Answer: There are four main ways to manage a state in a React application.
+                <h5 class="text-lg font-bold">Question No-1 What are the different ways to manage a state in a React application?</h5>
+                <p><span class="text-lg font-bold">Answer:</span>  There are four main ways to manage a state in a React application.
 <br />
 1. Local state
 2. Global state
@@ -24,17 +24,17 @@ URL state: URL state is quite easy to manage, usually through custom hooks that 
                 <br /><br />
 
 
-                <h5>Question No-2 How does prototypical inheritance work?</h5>
-                <p>Answer: 
+                <h5 class="text-lg font-bold">Question No-2 How does prototypical inheritance work?</h5>
+                <p> <span class="text-lg font-bold">Answer:</span> 
 The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. Traditionally, in order to get and set the (Prototype) of an object, we use Object.getPrototypeOf and Object.</p>
                 <br />
-                <h5>Question No-3 What is a unit test? Why should we write unit tests?</h5>
-                <p>Answer: JavaScript Unit Testing is a method where JavaScript test code is written for a web page or web application module. It is then combined with HTML as an inline event handler and executed in the browser to test if all functionalities are working as desired. These unit tests are then organized in the test suite.
+                <h5 class="text-lg font-bold">Question No-3 What is a unit test? Why should we write unit tests?</h5>
+                <p><span class="text-lg font-bold">Answer:</span>  JavaScript Unit Testing is a method where JavaScript test code is written for a web page or web application module. It is then combined with HTML as an inline event handler and executed in the browser to test if all functionalities are working as desired. These unit tests are then organized in the test suite.
 <br />
 Well-written unit tests act as documentation for your code. Any developer can quickly look at your tests and know the purpose of your functions. It simplifies the debugging process. Unit testing is an integral part of extreme programming.</p>
                 <br />
-                <h5>Question No-4 React vs. Angular vs. Vue?</h5>
-                <p>Answer: 
+                <h5 class="text-lg font-bold">Question No-4 React vs. Angular vs. Vue?</h5>
+                <p><span class="text-lg font-bold">Answer:</span>  
 Vue provides higher customizability and hence is easier to learn than Angular or React. Further, Vue has an overlap with Angular and React with respect to their functionality like the use of components. Hence, the transition to Vue from either of the two is an easy option.</p>
                 <br />
             </div>
