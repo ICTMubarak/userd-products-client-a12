@@ -30,7 +30,7 @@ const Navbar = () => {
                 <ul className="p-2">
                   <li><Link to="/hp">HP Laptop</Link></li>
                   <li><Link to="/dell">Dell Laptop</Link></li>
-                  <li><a>Asser Laptop</a></li>
+                  <li><Link to="/acer">Acer Laptop</Link></li>
                 </ul>
               </li>
               <li><Link to='/login'>LogIn</Link></li>
@@ -53,7 +53,7 @@ const Navbar = () => {
               <ul className="p-2">
                   <li><Link to="/hp">HP Laptop</Link></li>
                   <li><Link to="/dell">Dell Laptop</Link></li>
-                  <li><a>Asser Laptop</a></li>
+                  <li><Link to="/acer">Acer Laptop</Link></li>
               </ul>
             </li>
             <li><Link to='/login'>LogIn</Link></li>
