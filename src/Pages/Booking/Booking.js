@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Booking = () => {
+const Booking = (product) => {
+    console.log(product);
     return (
         <div>
             <h1>This is Booking section</h1>

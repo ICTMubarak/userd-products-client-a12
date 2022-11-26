@@ -2,6 +2,7 @@ import Main from "../Layout/Main";
 import Login from "../Login/Login";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import Blog from "../Pages/Blog/Blog";
+import Booking from "../Pages/Booking/Booking";
 import Home from "../Pages/Home/Home";
 import NotFound from "../Pages/NotFound/NotFound";
 import Acer from "../Pages/ProductShow/Acer";
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/booking',
+                element: <Booking></Booking>
             },
             {
                 path: '/login',

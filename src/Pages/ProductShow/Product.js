@@ -4,9 +4,6 @@ import Booking from '../Booking/Booking';
 
 const Product = (product) => {
 
-   
-
-
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
            <figure><img src={product.product.pic} alt={product.product.name} /></figure>
@@ -20,9 +17,12 @@ const Product = (product) => {
           <p>Mobile: {product.product.mobile}</p>
       </div>
            <Link to={`/booking/${product.product._id}`}>
-            <button className='btn btn-primary'>Booking</button>
+            <button className='btn btn-primary'>Book now</button>
           </Link>
           <br />
+          <Link className='btn btn-primary' product = {product.product._id} to="/booking">
+            Book now
+          </Link>
           
     </div>
     );
