@@ -36,9 +36,15 @@ const Navbar = () => {
             <li><Link to='/addproduct'>Add Product</Link></li>
             <li><Link to='/blog'>Blog</Link></li>
 
-            <li><Link to='/login'>LogIn</Link></li>
-            <li><Link>LogOut</Link></li>
-            <li><Link to='/register'>Register</Link></li>
+            {
+              user?.uid ?
+              <li><a><button onClick={handleLogout}>Log Out</button></a></li>
+               : <>
+               <li><Link to='/login'>LogIn</Link></li>  
+               <li><Link to='/register'>Register</Link></li>
+               </>
+            
+            }
             </ul>
           </div>
           <a className="btn btn-ghost normal-case text-xl">UsedLaptop.com</a>
@@ -62,9 +68,16 @@ const Navbar = () => {
           <li><Link to='/addproduct'>Add Product</Link></li>
           <li><Link to='/blog'>Blog</Link></li>
 
-            <li><Link to='/login'>LogIn</Link></li>
-            <li><a><button onClick={handleLogout}>Log Out</button></a></li>
-            <li><Link to='/register'>Register</Link></li>
+            {
+              user?.uid ?
+              <li><a><button onClick={handleLogout}>Log Out</button></a></li>
+               : <>
+               <li><Link to='/login'>LogIn</Link></li>  
+               <li><Link to='/register'>Register</Link></li>
+               </>
+            
+            }
+            
           </ul>
         </div>
         <div className="navbar-end">
