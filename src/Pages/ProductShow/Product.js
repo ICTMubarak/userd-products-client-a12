@@ -6,7 +6,12 @@ const Product = (product) => {
            <figure><img src={product.product.pic} alt={product.product.name} /></figure>
         <div  className="card-body gap-4">
          <h2 className="card-title">Product Name: {product.product.name}</h2>
+          <p>Model: {product.product.name}</p>
           <p>Price: {product.product.price}</p>
+          <p>Product Condition: {product.product.condition}</p>
+          <p>Description: {product.product.description}</p>
+          <p>Location: {product.product.location}</p>
+          <p>Mobile: {product.product.mobile}</p>
       </div>
     </div>
     );
