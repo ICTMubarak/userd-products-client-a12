@@ -19,11 +19,7 @@ const Product = (product) => {
            <Link to={`/booking/${product.product._id}`}>
             <button className='btn btn-primary'>Book now</button>
           </Link>
-          <br />
-          <Link className='btn btn-primary' product = {product.product._id} to="/booking">
-            Book now
-          </Link>
-          
+          <br />            
     </div>
     );
 };

@@ -81,8 +81,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
+
+          
         {user?.email && <span>{user.email}</span>}
-           <p>Profile Name</p>
+    
         </div>
         {console.log(user)}
       </div>
