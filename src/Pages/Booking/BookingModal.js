@@ -1,7 +1,43 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../contexts/UserContext';
 
 const BookingModal = (bookProduct) => {
-    console.log('bp=',bookProduct);
+    const {user} = useContext(AuthContext);
+    const [buyConfirm, setBuyConfirm] = useState({});
+
+    console.log(buyConfirm);
+    
+    const handleBuyConfirm = event =>{
+        event.preventDefault();
+        fetch('http://localhost:5000/orderconfirm', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(buyConfirm)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.acknowledged){
+                window.alert('Your order confirm successfully');
+                event.target.reset();
+            }
+        })
+        
+    }
+
+
+    const handleInputBlur = event =>{
+        const value = event.target.value;
+        const field = event.target.name;
+        const newBuyConfirm = {...buyConfirm}
+        newBuyConfirm[field] = value;
+        setBuyConfirm(newBuyConfirm);
+        
+    }
+
+
     return (
         <>
             <input type="checkbox" id="booking-modal" className="modal-toggle" />
@@ -12,13 +48,16 @@ const BookingModal = (bookProduct) => {
                     <h3 className="text-lg font-bold">Laptop Price: {bookProduct.bookProduct.price}</h3>
                     <h3 className="text-lg font-bold">Saler Location: {bookProduct.bookProduct.location}</h3>
                     <h3 className="text-lg font-bold">Contuct : {bookProduct.bookProduct.mobile}</h3>
-                    <form className='mt-10 grid grid-cols-1 gap-3'>
+                    <form onSubmit={handleBuyConfirm} className='mt-10 grid grid-cols-1'>
                         
-                        Your Mobile No:- <input type="text" placeholder="Type your mobile number" className="input input-bordered w-full " /><br />
-                        Your Email:- <input type="text" placeholder="Type your email" className="input input-bordered w-full " /><br />
-                        Your Location:- <input type="text" placeholder="Type your location" className="input input-bordered w-full " />
+                        Your Name:- <input onBlur={handleInputBlur} name="name" type="text" placeholder="Type your name" className="input input-bordered w-full " required/><br />
+                        Your Mobile No:- <input onBlur={handleInputBlur} name="mobile" type="text" placeholder="Type your mobile number" className="input input-bordered w-full " required/><br />
+                        Your Email:- <input onBlur={handleInputBlur} name="email" type="email" placeholder="Type your email" className="input input-bordered w-full " required/><br />
+                        Your Location:- <input onBlur={handleInputBlur} name="location" type="text" placeholder="Type your location" className="input input-bordered w-full " required/>
                         <br /><br />
-                        <input className='btn btn-primary' type="submit" value="Buy Confirm" />
+        
+                         <input className='btn btn-primary' type="submit" value="Buy Confirm" />
+                           
                     </form>
                 </div>
             </div>
