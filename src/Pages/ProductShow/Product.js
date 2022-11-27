@@ -17,7 +17,7 @@ const Product = (product) => {
           <p>Mobile: {product.product.mobile}</p>
       </div>
            <Link to={`/booking/${product.product._id}`}>
-            <button className='btn btn-primary'>Book now</button>
+            <button className='btn btn-primary'>Booking</button>
           </Link>
           <br />            
     </div>

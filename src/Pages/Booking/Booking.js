@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UserContext';
+import BookingModal from './BookingModal';
 
 const Booking = () => {
     
@@ -10,15 +11,18 @@ const Booking = () => {
 
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
-           <figure><img src={bookProduct.pic} alt={bookProduct.name} /></figure>
-        <div  className="card-body gap-4">
-         <h2 className="card-title">Product Name: {bookProduct.name}</h2>
-          
-      </div>
-           
-          <br />            
-    </div>
+        <div className="card w-full bg-base-100">
+        <figure><img src={bookProduct.pic} alt={bookProduct.name} /></figure>
+       <p class="text-lg font-bold">Model: {bookProduct.name}</p>
+       <p class="text-lg font-bold">Price: {bookProduct.price}</p>
+       
+       <p class="text-lg font-bold">Location: {bookProduct.location}</p>
+       <p class="text-lg font-bold">Mobile: {bookProduct.mobile}</p>
+       <label htmlFor="booking-modal" className="btn btn-primary"
+       
+       >Book Now</label>
+        <BookingModal bookProduct={bookProduct}></BookingModal>     
+ </div>
     );
 };
 
