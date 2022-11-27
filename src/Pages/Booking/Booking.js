@@ -17,10 +17,8 @@ const Booking = () => {
        <p class="text-lg font-bold">Price: {bookProduct.price}</p>
        
        <p class="text-lg font-bold">Location: {bookProduct.location}</p>
-       <p class="text-lg font-bold">Mobile: {bookProduct.mobile}</p>
-       <label htmlFor="booking-modal" className="btn btn-primary"
-       
-       >Book Now</label>
+       <p class="text-lg font-bold">Mobile: {bookProduct.mobile}</p><br />
+       <label htmlFor="booking-modal" className="btn btn-primary">Buy Now</label>
         <BookingModal bookProduct={bookProduct}></BookingModal>     
  </div>
     );

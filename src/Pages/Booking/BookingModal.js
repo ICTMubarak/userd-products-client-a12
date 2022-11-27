@@ -48,12 +48,14 @@ const BookingModal = (bookProduct) => {
                     <h3 className="text-lg font-bold">Laptop Price: {bookProduct.bookProduct.price}</h3>
                     <h3 className="text-lg font-bold">Saler Location: {bookProduct.bookProduct.location}</h3>
                     <h3 className="text-lg font-bold">Contuct : {bookProduct.bookProduct.mobile}</h3>
-                    <form onSubmit={handleBuyConfirm} className='mt-10 grid grid-cols-1'>
+                    <form onSubmit={handleBuyConfirm} className='mt-4 grid grid-cols-1'>
                         
-                        Your Name:- <input onBlur={handleInputBlur} name="name" type="text" placeholder="Type your name" className="input input-bordered w-full " required/><br />
-                        Your Mobile No:- <input onBlur={handleInputBlur} name="mobile" type="text" placeholder="Type your mobile number" className="input input-bordered w-full " required/><br />
-                        Your Email:- <input onBlur={handleInputBlur} name="email" type="email" placeholder="Type your email" className="input input-bordered w-full " required/><br />
-                        Your Location:- <input onBlur={handleInputBlur} name="location" type="text" placeholder="Type your location" className="input input-bordered w-full " required/>
+                    Product ID: <input onBlur={handleInputBlur} name="prodct_id" type="text" value={bookProduct.bookProduct._id} className="input input-bordered w-full " required/>
+                        <input onBlur={handleInputBlur} name="name" type="text" placeholder="Type your name" className="input input-bordered w-full " required/><br />
+                        <input onBlur={handleInputBlur} name="mobile" type="text" placeholder="Type your mobile number" className="input input-bordered w-full " required/><br />
+                        <input onBlur={handleInputBlur} name="email" type="email" placeholder="Type your email" className="input input-bordered w-full " required/><br />
+                         <input onBlur={handleInputBlur} name="location" type="text" placeholder="Type your location" className="input input-bordered w-full " required/>
+                        
                         <br /><br />
         
                          <input className='btn btn-primary' type="submit" value="Buy Confirm" />
