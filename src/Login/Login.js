@@ -41,9 +41,14 @@ return (
           </label>
           <input type="password" name="password" placeholder="password" className="input input-bordered" required />
         </div>
+        <div className='flex gap-4 mt-4'>
+      <span class="text-lg font-bold">As a User</span><input type="radio" name="user" className="radio radio-primary" checked />
+      <span class="text-lg font-bold">As a Saler</span><input type="radio" name="saler" className="radio radio-primary" />
+        </div>
         <div className="form-control mt-6">
           <button className="btn">Login</button>
         </div>
+
       </div>
     </form>
   </div>

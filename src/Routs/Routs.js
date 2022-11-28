@@ -1,4 +1,5 @@
-import DeshBoard from "../DeshBoard/DeshBoard";
+import AllBuyers from "../DeshBoard/AllBuyers";
+import AllSellers from "../DeshBoard/AllSellers";
 import Main from "../Layout/Main";
 import Login from "../Login/Login";
 import AddProduct from "../Pages/AddProduct/AddProduct";
@@ -64,14 +65,23 @@ const router = createBrowserRouter([
                 path: '*',
                 element: <NotFound></NotFound>
             },
+            {
+                path: '/allsellers',
+                element: <AllSellers></AllSellers>,
+                loader: ()  => fetch('http://localhost:5000/advertised')
+               
+            },
+            {
+                path: '/allbuyers',
+                element: <AllBuyers></AllBuyers>,
+                loader: ()  => fetch('http://localhost:5000/allbuyers')
+               
+            }
+           
 
         ]
-    },
-    {
-        path: '/deshboard',
-        element: <DeshBoard></DeshBoard>
-       
     }
+    
 ])
 
 export default router;

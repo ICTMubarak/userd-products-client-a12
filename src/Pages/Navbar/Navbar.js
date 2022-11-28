@@ -42,11 +42,24 @@ const Navbar = () => {
                : <>
                <li><Link to='/login'>LogIn</Link></li>  
                <li><Link to='/register'>Register</Link></li>
-               <li><Link to='/deshboard'>Dashboard</Link></li>
                </>
             
             }
+
+
+              <li tabIndex={0}>
+                <a className="justify-between">
+                  Dashboard
+                  <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+                </a>
+                <ul className="p-2">
+                  <li><Link to="/allsellers">All Sellers</Link></li>
+                  <li><Link to="/allbuyers">All Buyers</Link></li>
+                </ul>
+              </li>
+
             </ul>
+            
           </div>
           <a className="btn btn-ghost normal-case text-xl">UsedLaptop.com</a>
         </div>
@@ -75,10 +88,20 @@ const Navbar = () => {
                : <>
                <li><Link to='/login'>LogIn</Link></li>  
                <li><Link to='/register'>Register</Link></li>
-               <li><Link to='/deshboard'>Dashboard</Link></li>
                </>
             
             }
+
+<li tabIndex={0}>
+                <a className="justify-between">
+                  Dashboard
+                  <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
+                </a>
+                <ul className="p-2">
+                  <li><Link to="/allsellers">All Sellers</Link></li>
+                  <li><Link to="/allbuyers">All Buyers</Link></li>
+                </ul>
+              </li>
             
           </ul>
         </div>
