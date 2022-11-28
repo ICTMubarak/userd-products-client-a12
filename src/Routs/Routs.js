@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()  => fetch('http://localhost:5000/advertised')
+                loader: ()  => fetch('https://used-laptop-server.vercel.app/advertised')
             },
             {
                 path: '/addproduct',
@@ -32,17 +32,17 @@ const router = createBrowserRouter([
             {
                 path: '/hp',
                 element: <Hp></Hp>,
-                loader: ()  => fetch('http://localhost:5000/hp')
+                loader: ()  => fetch('https://used-laptop-server.vercel.app/hp')
             },
             {
                 path: '/dell',
                 element: <Dell></Dell>,
-                loader: ()  => fetch('http://localhost:5000/dell')
+                loader: ()  => fetch('https://used-laptop-server.vercel.app/dell')
             },
             {
                 path: '/acer',
                 element: <Acer></Acer>,
-                loader: ()  => fetch('http://localhost:5000/acer')
+                loader: ()  => fetch('https://used-laptop-server.vercel.app/acer')
             },
             {
                 path: '/blog',
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
             {
                 path: '/booking/:id',
                 element: <Booking></Booking>,
-                loader: ({params}) => fetch(`http://localhost:5000/booking/${params.id}`)
+                loader: ({params}) => fetch(`https://used-laptop-server.vercel.app/booking/${params.id}`)
               },
             {
                 path: '/login',
@@ -68,13 +68,13 @@ const router = createBrowserRouter([
             {
                 path: '/allsellers',
                 element: <AllSellers></AllSellers>,
-                loader: ()  => fetch('http://localhost:5000/advertised')
+                loader: ()  => fetch('https://used-laptop-server.vercel.app/advertised')
                
             },
             {
                 path: '/allbuyers',
                 element: <AllBuyers></AllBuyers>,
-                loader: ()  => fetch('http://localhost:5000/allbuyers')
+                loader: ()  => fetch('https://used-laptop-server.vercel.app/allbuyers')
                
             }
            

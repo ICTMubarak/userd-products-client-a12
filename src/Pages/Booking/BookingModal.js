@@ -9,7 +9,7 @@ const BookingModal = (bookProduct) => {
     
     const handleBuyConfirm = event =>{
         event.preventDefault();
-        fetch('http://localhost:5000/orderconfirm', {
+        fetch('https://used-laptop-server.vercel.app/orderconfirm', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

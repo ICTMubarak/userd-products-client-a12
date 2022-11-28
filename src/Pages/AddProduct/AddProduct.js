@@ -8,7 +8,7 @@ const AddProduct = () => {
 
     const handleAddProduct = event =>{
         event.preventDefault();
-        fetch('http://localhost:5000/addproduct', {
+        fetch('https://used-laptop-server.vercel.app/addproduct', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -1,7 +1,7 @@
 # Old Laptop buy and sell Website
 This web site is basically a website for buy and sale of old laptops. If you have an old laptop, you can easily sell it here.
 
-## [Our live website link](https://used-laptop-99898.web.app/)
+## [Our live website link](https://used-laptop-53be9.web.app/)
 You can visite it easyly from any where and see three catagorys old laptop here.
 
 # You can sell your used laptop
