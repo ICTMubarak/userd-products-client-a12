@@ -1,3 +1,4 @@
+import DeshBoard from "../DeshBoard/DeshBoard";
 import Main from "../Layout/Main";
 import Login from "../Login/Login";
 import AddProduct from "../Pages/AddProduct/AddProduct";
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: ()  => fetch('http://localhost:5000/advertised')
             },
             {
                 path: '/addproduct',
@@ -64,6 +66,11 @@ const router = createBrowserRouter([
             },
 
         ]
+    },
+    {
+        path: '/deshboard',
+        element: <DeshBoard></DeshBoard>
+       
     }
 ])
 

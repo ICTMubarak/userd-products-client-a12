@@ -42,6 +42,7 @@ const Navbar = () => {
                : <>
                <li><Link to='/login'>LogIn</Link></li>  
                <li><Link to='/register'>Register</Link></li>
+               <li><Link to='/deshboard'>Dashboard</Link></li>
                </>
             
             }
@@ -74,6 +75,7 @@ const Navbar = () => {
                : <>
                <li><Link to='/login'>LogIn</Link></li>  
                <li><Link to='/register'>Register</Link></li>
+               <li><Link to='/deshboard'>Dashboard</Link></li>
                </>
             
             }

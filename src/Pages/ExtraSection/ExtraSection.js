@@ -3,7 +3,7 @@ import React from 'react';
 const ExtraSection = () => {
     return (
         <div className='w-full'>
-            <div class="flex items-center">
+            <div class="flex items-center gap-4">
             <section class="flex-1">
              <div className="card card-compact w-full bg-base-100 shadow-xl">
                <div className="card-body">
